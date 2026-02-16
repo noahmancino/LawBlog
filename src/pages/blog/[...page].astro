@@ -1,0 +1,59 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import '../../styles/global.css';
+
+export const getStaticPaths = (async ({ paginate }) => {
+    const posts = await getCollection('posts');
+    // Sort newest first
+    posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+    return paginate(posts, { pageSize: 4 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+const formatDate = (date: Date) => {
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: '2-digit',
+    });
+};
+---
+
+<Base title="Noah Mancino" headerStyle="index">
+    <main class="main-content">
+        <div class="post-list">
+            {page.data.map((post) => (
+                <article class="post-item">
+                    <a href={`/blog/${post.id.replace(/\.md$/, '')}/`}>
+                        <div class="post-date">{formatDate(post.data.date)}</div>
+                        <h2 class="post-title">{post.data.title}</h2>
+                        <p class="post-excerpt">{post.data.excerpt}</p>
+                    </a>
+                </article>
+            ))}
+        </div>
+    </main>
+
+    <footer class="pagination">
+        {page.url.prev ? (
+            <a href={page.url.prev}>
+                <span class="arrow arrow-left">←</span>
+                Newer
+            </a>
+        ) : <span />}
+
+        {page.currentPage > 1 && (
+            <span class="page-number">Page {page.currentPage}</span>
+        )}
+
+        {page.url.next ? (
+            <a href={page.url.next}>
+                Older
+                <span class="arrow arrow-right">→</span>
+            </a>
+        ) : <span />}
+    </footer>
+</Base>
