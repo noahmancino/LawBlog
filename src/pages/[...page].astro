@@ -1,8 +1,8 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
-import Base from '../../layouts/Base.astro';
-import '../../styles/global.css';
+import Base from '../layouts/Base.astro';
+import '../styles/global.css';
 
 export const getStaticPaths = (async ({ paginate }) => {
     const posts = await getCollection('posts');
@@ -27,7 +27,7 @@ const formatDate = (date: Date) => {
         <div class="post-list">
             {page.data.map((post) => (
                 <article class="post-item">
-                    <a href={`/blog/${post.id.replace(/\.md$/, '')}/`}>
+                    <a href={`/${post.id.replace(/\.md$/, '')}/`}>
                         <div class="post-date">{formatDate(post.data.date)}</div>
                         <h2 class="post-title">{post.data.title}</h2>
                         <p class="post-excerpt">{post.data.excerpt}</p>

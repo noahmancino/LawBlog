@@ -1,8 +1,8 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import { getCollection, render } from 'astro:content';
-import Base from '../../layouts/Base.astro';
-import '../../styles/global.css';
+import Base from '../layouts/Base.astro';
+import '../styles/global.css';
 
 export const getStaticPaths = (async () => {
     const posts = await getCollection('posts');
@@ -48,14 +48,14 @@ const formatDate = (date: Date) => {
     {(prevPost || nextPost) && (
         <nav class="post-nav">
             {prevPost ? (
-                <a href={`/blog/${prevPost.id.replace(/\.md$/, '')}/`}>
+                <a href={`/${prevPost.id.replace(/\.md$/, '')}/`}>
                     <span class="arrow arrow-left">←</span>
                     Previous Post
                 </a>
             ) : <span />}
 
             {nextPost ? (
-                <a href={`/blog/${nextPost.id.replace(/\.md$/, '')}/`}>
+                <a href={`/${nextPost.id.replace(/\.md$/, '')}/`}>
                     Next Post
                     <span class="arrow arrow-right">→</span>
                 </a>
