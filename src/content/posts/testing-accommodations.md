@@ -20,7 +20,8 @@ The only area where I would modify the provision is the list of categories of im
 
 ## Defending the Standard
 
-The DOJ-type standard I defend is best understood as forcing examiners to act in a way that is prudent in the pursuit of accuracy of assessment. It is not motivated by any substantive sense of what is a just outcome for the individual test-taker. This is a virtue because it is sensitive to the actual purpose of examinations. In the first instance, the purpose of a test is not to confer prestige or shame, nor to allocate resources. It is to measure aptitude or knowledge in a specified area. Concerns about justice in post-test outcomes may be legitimate, but to bias the test on this basis is to confuse an issue with the use of the measurement for an issue with the measurement itself.
+The DOJ-type standard I defend is best understood as forcing examiners to act in a way that is prudent in the pursuit of accuracy of assessment. It is not motivated by any substantive sense of what is a just outcome for the individual test-taker. This is a virtue because it is sensitive to the actual purpose of examinations. In the first instance, the purpose of a test is not to confer prestige or shame, nor to allocate resources. It is to measure aptitude or knowledge in a specified area. Concerns about inequality in post-test outcomes may be legitimate, but to bias the test on this basis is to confuse an issue with the use of the measurement for an issue with the measurement itself. Complaining that accommodations are inherently unfair because they violate the principle of a 'level playing field' mistakes a principle of measurement methodology for a moral principal; moreover, it is question-begging.
+
 
 ## Clear and Penumbral Cases
 
