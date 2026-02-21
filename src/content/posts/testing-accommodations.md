@@ -1,5 +1,5 @@
 ---
-title: "Testing Accommodations and the Standard of Measurement Prudence"
+title: "Who Deserves Extra Time on a Test?"
 date: 2026-02-21
 excerpt: "In the neurotic world of admissions forums, no topic inspires bellyaching and division quite like testing accommodations. The common way discussions proceed on this topic is that someone calls people who are granted accommodations cheaters, then another person responds by calling that person a self-centered bigot. If the interlocutors decide to reason at all, they mostly do so by providing their own vague standard for fairness, without either side explaining why their standard is superior to the other's."
 ---
